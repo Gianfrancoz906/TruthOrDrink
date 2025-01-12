@@ -1,0 +1,69 @@
+<Shell
+    x:Class="TruthOrDrink.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TruthOrDrink"
+    FlyoutBehavior="Flyout"
+    Title="TruthOrDrink">
+
+    
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label Text="Menu" FontSize="25" HorizontalOptions="Center" Margin="0, 20, 0, 50"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+   
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout>
+            <Label Text="Truth or Drink" FontSize="8" Margin="5" HorizontalOptions="Center"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+    <ShellContent
+    Title=""
+        
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage"
+    Shell.FlyoutBehavior="Disabled" />
+    
+    <FlyoutItem Title="Main Game" Route="HomePage">
+        <ShellContent
+            Title="Main Game"
+            ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Questions" Route="QuestionPage">
+        <ShellContent
+            Title="Questions"
+            ContentTemplate="{DataTemplate local:QuestionPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Drunk Test" Route="DrunkTestPage">
+        <ShellContent
+            Title="DrunkTest"
+            ContentTemplate="{DataTemplate local:DrunkTestPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Take a Picture" Route="PicturePage">
+        <ShellContent
+            Title="Take a Picture"
+            ContentTemplate="{DataTemplate local:PicturePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Quote of the Day" Route="QuotePage">
+        <ShellContent
+            Title="Quote of the Day"
+            ContentTemplate="{DataTemplate local:QuotePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Route="SettingsPage">
+        <ShellContent
+            Title="Settings"
+            ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </FlyoutItem>
+
+   
+    
+</Shell>
